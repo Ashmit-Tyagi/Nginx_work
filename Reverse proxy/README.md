@@ -80,5 +80,16 @@
   `sudo systemctl reload nginx`
 
 
+### 6. Securing with SSL using Certbot
+
+  #### Install Certbot
+
+    `sudo apt install certbot python3-certbot-nginx`
+
+  #### Run Certbot
+
+    `sudo certbot --nginx -d your-domain.com`
+
+
 
 
