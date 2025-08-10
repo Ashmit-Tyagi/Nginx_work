@@ -62,12 +62,22 @@
 #### Test and reload Nginx
 
   `sudo nginx -t`
+  
   `sudo systemctl reload nginx`
 
+### 5. Point Domain to the Server
 
+#### In the domain registrar’s DNS settings, create an A record.
 
+    Name: @annoyingash.icu
+          www.annoyingash.icu
+  
+    Value: Server’s public IP
 
-### 5.  Test the Routing
+    TTL: Default
+
+#### This points annoyingash.icu and www.annoyingash.icu to EC2 instance.
+
 
 
 
