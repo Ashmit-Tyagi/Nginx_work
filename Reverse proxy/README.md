@@ -2,24 +2,31 @@
 
 ### 1️. Launch EC2 Instance
 
--  AMI: Ubuntu Server 
+- AMI: Ubuntu Server 
 - Instance Type: t2.micro
 - Security Group :
   
         ▪ Allow HTTPS (port 443)
         ▪ Allow HTTP (port 80)
-        ▪ Allow SSH (port 22) for browser terminal access
+        ▪ Allow SSH (port 22)
 
 
 
-### 2. Create Two Target Groups
+### 2. Install Jenkins
 
-Target Group A: Register the EC2 instance serving /app1
+# Install Java (required for Jenkins)
 
-Target Group B: Register the EC2 instance serving /app2
+  `sudo apt install fontconfig openjdk-17-jre -y`
 
-![Screenshot 2025-05-26 160700](https://github.com/user-attachments/assets/355cfc28-a13a-464e-aca9-fdaf88984de4)
+# Install Jenkins
 
+  `sudo apt install jenkins -y`
+
+# Start and enable Jenkins
+
+  `sudo systemctl start Jenkins`
+
+  `sudo systemctl enable jenkins`
 
 ### 3. Create an Application Load Balancer
 
