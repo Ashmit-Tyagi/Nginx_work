@@ -12,8 +12,6 @@
         ▪ Allow HTTP (port 80)
         ▪ Allow SSH (port 22)
 
-
-
 ### 2. Install Jenkins
 
 #### Install Java (required for Jenkins)
@@ -41,7 +39,30 @@
   `sudo systemctl status nginx`
 
 
-### 4. Configure Listener & Routing Rules
+### 4. Configure Nginx as Reverse Proxy
+
+#### Adding the configuration:
+
+  `sudo vim /etc/nginx/nginx.conf`
+
+    server {
+      listen 80;
+      server_name annoyingash.icu;
+  
+      location / {
+          proxy_pass         http://localhost:8080;
+          proxy_set_header   Host $host;
+          proxy_set_header   X-Real-IP $remote_addr;
+          proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+          proxy_set_header   X-Forwarded-Proto $scheme;
+          proxy_redirect     http:// https://;
+      }
+    }
+
+#### Test and reload Nginx
+
+  `sudo nginx -t`
+  `sudo systemctl reload nginx`
 
 
 
