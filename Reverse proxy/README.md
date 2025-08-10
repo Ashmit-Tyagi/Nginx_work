@@ -55,7 +55,7 @@
 
 ### 5. Configure Nginx as Reverse Proxy
 
-#### Adding the configuration:
+#### Add the configuration:
 
   `sudo vim /etc/nginx/nginx.conf`
 
