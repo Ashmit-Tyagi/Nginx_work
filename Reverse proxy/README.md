@@ -94,5 +94,12 @@
 - Certbot will automatically edit the Nginx config to redirect HTTP → HTTPS
 
 
+### 6. Test the Setup
+
+
+- Go to https://annoyingash.icu → Jenkins web UI should appear.
+
+- Verify redirection works (HTTP → HTTPS).
+
 
 
