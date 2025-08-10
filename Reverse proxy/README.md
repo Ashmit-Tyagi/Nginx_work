@@ -69,7 +69,6 @@
           proxy_set_header   X-Real-IP $remote_addr;
           proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
           proxy_set_header   X-Forwarded-Proto $scheme;
-          proxy_redirect     http:// https://;
       }
     }
 
@@ -88,7 +87,10 @@
 
   #### Run Certbot
 
-    `sudo certbot --nginx -d your-domain.com`
+    `sudo certbot --nginx -d annoyingash.icu`
+
+    Follow prompts to get SSL certificates.
+
 
 
 
