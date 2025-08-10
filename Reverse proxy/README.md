@@ -3,9 +3,6 @@
 ## Reverse Proxy on Ubuntu using Nginx & Deploy Jenkins on Custom Domain and Establishing SSL Configuration using OpenSSL & Certbot
 
 
-<img width="1399" height="589" alt="Screenshot 2025-08-10 161902" src="https://github.com/user-attachments/assets/03b385aa-5480-477c-a22f-5a44a83607a5" />
-
-
 ### 1. Launch EC2 Instance
 
 - AMI: Ubuntu Server 
