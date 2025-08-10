@@ -37,9 +37,23 @@
 #### Checking Statu of Nginx 
 
   `sudo systemctl status nginx`
+  
+
+### 4. Point Domain to the Server
+
+#### In the domain registrar’s DNS settings, create an A record.
+
+    Name: @annoyingash.icu
+          www.annoyingash.icu
+  
+    Value: Server’s public IP
+
+    TTL: Default
+
+#### This points annoyingash.icu and www.annoyingash.icu to EC2 instance.
 
 
-### 4. Configure Nginx as Reverse Proxy
+### 5. Configure Nginx as Reverse Proxy
 
 #### Adding the configuration:
 
@@ -64,19 +78,6 @@
   `sudo nginx -t`
   
   `sudo systemctl reload nginx`
-
-### 5. Point Domain to the Server
-
-#### In the domain registrar’s DNS settings, create an A record.
-
-    Name: @annoyingash.icu
-          www.annoyingash.icu
-  
-    Value: Server’s public IP
-
-    TTL: Default
-
-#### This points annoyingash.icu and www.annoyingash.icu to EC2 instance.
 
 
 
