@@ -89,9 +89,9 @@
 
     `sudo certbot --nginx -d annoyingash.icu`
 
-
-    - Follow prompts to get SSL certificates.
-
+- Follow prompts to get SSL certificates.
+  
+- Certbot will automatically edit the Nginx config to redirect HTTP → HTTPS
 
 
 
