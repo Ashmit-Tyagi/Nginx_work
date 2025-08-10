@@ -16,15 +16,15 @@
 
 ### 2. Install Jenkins
 
-# Install Java (required for Jenkins)
+#### Install Java (required for Jenkins)
 
   `sudo apt install fontconfig openjdk-17-jre -y`
 
-# Install Jenkins
+#### Install Jenkins
 
   `sudo apt install jenkins -y`
 
-# Start and enable Jenkins
+#### Start and enable Jenkins
 
   `sudo systemctl start Jenkins`
 
@@ -36,7 +36,7 @@
   
   `sudo systemctl enable nginx`
 
-# Checking Statu of Nginx 
+#### Checking Statu of Nginx 
 
   `sudo systemctl status nginx`
 
