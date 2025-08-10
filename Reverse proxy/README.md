@@ -2,18 +2,14 @@
 
 ### 1️. Launch EC2 Instance
 
-i. AMI: Ubuntu Server 
-ii. Instance Type: t2.micro
-ii. Security Group: 
+-  AMI: Ubuntu Server 
+- Instance Type: t2.micro
+- Security Group :
+  
         ▪ Allow HTTPS (port 443)
         ▪ Allow HTTP (port 80)
         ▪ Allow SSH (port 22) for browser terminal access
 
-Install a web server (e.g., Nginx) on both and configure different content for each path.
-
-![Screenshot 2025-05-26 160525](https://github.com/user-attachments/assets/0f622055-eb65-4825-9fbe-37af4e13b384)
-
-![Screenshot 2025-05-26 160401](https://github.com/user-attachments/assets/a67e1ef1-4889-41d5-9a4f-90c532358c97)
 
 
 ### 2. Create Two Target Groups
