@@ -2,7 +2,7 @@
 
 ## Reverse Proxy on Ubuntu using Nginx & Deploy Jenkins on Custom Domain and Establishing SSL Configuration using OpenSSL & Certbot
 
-### 1️. Launch EC2 Instance
+### 1. Launch EC2 Instance
 
 - AMI: Ubuntu Server 
 - Instance Type: t2.micro
