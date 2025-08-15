@@ -94,6 +94,8 @@
 
 ### 7. Path-Based Routing with Nginx
 
+  ## Path-based routing allows different paths of a domain to forward requests to different backend services.
+
 #### Deploy Backend Applications
 
       - Jenkins already running on localhost:8080.
@@ -137,4 +139,8 @@
     - https://annoyingash.icu/jenkins → Jenkins
   
     - https://annoyingash.icu/app1 →  App1
+
+### 9. Load Balancer using Nginx
+
+  ## Load balancing helps distribute traffic across multiple backend servers for better performance and availability.
 
