@@ -104,7 +104,7 @@
 
 #### Edit Nginx Configuration
 
-    `sudo vim /etc/nginx/nginx.conf`
+`sudo vim /etc/nginx/nginx.conf`
 
     server {
       listen 80;
