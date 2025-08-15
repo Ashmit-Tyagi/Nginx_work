@@ -1,7 +1,4 @@
-# Reverse Proxy using Nginx
-
-## Reverse Proxy on Ubuntu using Nginx & Deploy Jenkins on Custom Domain and Establishing SSL Configuration using OpenSSL & Certbot
-
+# Load Balancing and Path based routing using Nginx
 
 ### 1. Launch EC2 Instance
 
@@ -95,12 +92,45 @@
 - Certbot will automatically edit the Nginx config to redirect HTTP → HTTPS
 
 
-### 7. Test the Setup
+### 7. Path-Based Routing with Nginx
+
+#### Deploy Backend Applications
+
+      - Jenkins already running on localhost:8080.
+
+      - Deploy another app on a different port, say localhost:5000
+
+#### Edit Nginx Configuration
+
+    `sudo vim /etc/nginx/nginx.conf`
+
+    server {
+      listen 80;
+      server_name annoyingash.icu;
+  
+      location /jenkins/ {
+          proxy_pass http://localhost:8080/;
+          proxy_set_header Host $host;
+          proxy_set_header X-Real-IP $remote_addr;
+          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+          proxy_set_header X-Forwarded-Proto $scheme;
+      }
+  
+      location /app1/ {
+          proxy_pass http://localhost:5000/;
+          proxy_set_header Host $host;
+          proxy_set_header X-Real-IP $remote_addr;
+          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+          proxy_set_header X-Forwarded-Proto $scheme;
+      }
+    }
 
 
-- Go to https://annoyingash.icu → Jenkins web UI should appear.
+#### Test & Reload Nginx
 
-- Verify redirection works (HTTP → HTTPS).
+    `sudo nginx -t`
+    
+    `sudo systemctl reload nginx`
 
 
 
