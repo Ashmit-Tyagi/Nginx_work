@@ -144,3 +144,41 @@
 
   ### Load balancing helps distribute traffic across multiple backend servers for better performance and availability.
 
+#### Update Nginx Config
+
+    `sudo vim /etc/nginx/nginx.conf`
+
+    upstream jenkins_servers {
+        server 127.0.0.1:1111;
+        server 127.0.0.1:2222;
+    }
+    server {
+        listen 80;
+        server_name annoyingash.icu;
+    
+        location / {
+            proxy_pass http://jenkins_servers;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+        }
+    }
+
+#### Test & Reload Nginx
+
+  `sudo nginx -t`
+  
+  `sudo systemctl reload nginx`
+
+### 10. Result
+
+    - Jenkins is accessible on a custom domain with HTTPS instead of IP and port.
+
+    -  Nginx reverse proxy securely routes traffic to the right service.
+    
+    - SSL/TLS enabled with Certbot for encrypted connections and auto renewal.
+
+    - Path-based routing lets multiple apps run on different paths of the same domain.
+
+    - Load balancing distributes traffic across backend servers for better performance and uptime.
