@@ -146,7 +146,7 @@
 
 #### Update Nginx Config
 
-    `sudo vim /etc/nginx/nginx.conf`
+`sudo vim /etc/nginx/nginx.conf`
 
     upstream jenkins_servers {
         server 127.0.0.1:1111;
