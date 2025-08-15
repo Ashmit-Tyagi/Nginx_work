@@ -94,7 +94,7 @@
 
 ### 7. Path-Based Routing with Nginx
 
-  ## Path-based routing allows different paths of a domain to forward requests to different backend services.
+  ### Path-based routing allows different paths of a domain to forward requests to different backend services.
 
 #### Deploy Backend Applications
 
@@ -142,5 +142,5 @@
 
 ### 9. Load Balancer using Nginx
 
-  ## Load balancing helps distribute traffic across multiple backend servers for better performance and availability.
+  ### Load balancing helps distribute traffic across multiple backend servers for better performance and availability.
 
