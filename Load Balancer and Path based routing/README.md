@@ -132,5 +132,9 @@
     
   `sudo systemctl reload nginx`
 
+#### Access
 
+    - https://annoyingash.icu/jenkins → Jenkins
+  
+    - https://annoyingash.icu/app 1 →  App1
 
