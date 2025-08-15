@@ -136,5 +136,5 @@
 
     - https://annoyingash.icu/jenkins → Jenkins
   
-    - https://annoyingash.icu/app 1 →  App1
+    - https://annoyingash.icu/app1 →  App1
 
