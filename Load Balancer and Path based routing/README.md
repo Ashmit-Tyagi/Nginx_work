@@ -128,9 +128,9 @@
 
 #### Test & Reload Nginx
 
-    `sudo nginx -t`
+  `sudo nginx -t`
     
-    `sudo systemctl reload nginx`
+  `sudo systemctl reload nginx`
 
 
 
